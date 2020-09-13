@@ -15,11 +15,19 @@ docker pull postgres:11
 docker run --name dev-postgres -p 5432:5432 -e POSTGRES_PASSWORD=mysecretpassword -d postgres:11
 
 # CREATE db coursedb
-# Onetime ?
-docker exec dev-postgres psql -U postgres -c "CREATE DATABASE coursedb" postgres
+# Onetime ? <-------------- ?
+# docker exec dev-postgres psql -U postgres -c "CREATE DATABASE coursedb" postgres
 
 # Open another terminal
-git clone 
-cd /Users/ying/dev/github/SpringBootAPI
+cd ~/dev/github
+git clone https://github.com/weipingc/SpringBootAPI.git
+cd SpringBootAPI
+./mvnw clean spring-boot:run
+
+# in brower
+# go to http://localhost:8080/employees
+
+# or 
+curl -v http://localhost:8080/employees
 ----
  
