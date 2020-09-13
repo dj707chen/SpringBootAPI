@@ -1,0 +1,20 @@
+
+Working with PostgreSQL
+-----------------------
+
+ * https://developer.okta.com/blog/2019/02/20/spring-boot-with-postgresql-flyway-jsonb[Get Started with PostgreSQL via Docker]
+ * Download and install docker
+ * Run the following
+ 
+----
+docker pull postgres:11
+# To verify pulled image
+# docker image inspect postgres:11
+
+# Run Postgres
+docker run --name dev-postgres -p 5432:5432 -e POSTGRES_PASSWORD=mysecretpassword -d postgres:11
+
+# CREATE db coursedb
+docker exec dev-postgres psql -U postgres -c "CREATE DATABASE coursedb" postgres
+----
+ 
