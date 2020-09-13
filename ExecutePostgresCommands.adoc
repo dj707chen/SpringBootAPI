@@ -1,0 +1,41 @@
+# Run Postgres
+docker run --name dev-postgres -p 5432:5432 -e POSTGRES_PASSWORD=mysecretpassword -d postgres:11
+
+# CREATE db coursedb
+# Onetime ? <-------------- ?
+# docker exec dev-postgres psql -U postgres -c "CREATE DATABASE coursedb" postgres
+
+----
+\c coursedb
+
+
+coursedb=# \dt
+          List of relations
+ Schema |   Name   | Type  |  Owner
+--------+----------+-------+----------
+ public | employee | table | postgres
+(1 row)
+
+
+coursedb=# \d employee
+                     Table "public.employee"
+ Column |          Type          | Collation | Nullable | Default
+--------+------------------------+-----------+----------+---------
+ id     | bigint                 |           | not null |
+ name   | character varying(255) |           |          |
+ role   | character varying(255) |           |          |
+Indexes:
+    "employee_pkey" PRIMARY KEY, btree (id)
+    
+    
+coursedb=# select * from employee;
+ id |     name      |  role
+----+---------------+---------
+  1 | Bilbo Baggins | burglar
+  2 | Frodo Baggins | thief
+(2 rows)
+
+
+coursedb=# insert into employee (id, name, role) values (3, 'Weiping', 'CEO');
+INSERT 0 1
+coursedb=# \q
