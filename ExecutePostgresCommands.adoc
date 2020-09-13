@@ -6,6 +6,10 @@ docker run --name dev-postgres -p 5432:5432 -e POSTGRES_PASSWORD=mysecretpasswor
 # docker exec dev-postgres psql -U postgres -c "CREATE DATABASE coursedb" postgres
 
 ----
+or
+
+docker exec -it dev-postgres bash
+
 \c coursedb
 
 
