@@ -4,11 +4,25 @@
 docker run --name dev-postgres -p 5432:5432 -e POSTGRES_PASSWORD=mysecretpassword -d postgres:11
 
 # CREATE db coursedb
-# Onetime ? <-------------- ?
-# docker exec dev-postgres psql -U postgres -c "CREATE DATABASE coursedb" postgres
+docker exec dev-postgres psql -U postgres -c "CREATE DATABASE coursedb"
 
-or
+# Verify docker container dev-postgres is running, stop, restart
+docker ps -a
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                    NAMES
+f2d2922b5af6        postgres:11         "docker-entrypoint.s…"   16 minutes ago      Up 16 minutes       0.0.0.0:5432->5432/tcp   dev-postgres
+docker stop dev-postgres
+dev-postgres
+docker ps -a
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS                       PORTS               NAMES
+f2d2922b5af6        postgres:11         "docker-entrypoint.s…"   16 minutes ago      Exited (137) 4 seconds ago                       dev-postgres
+docker start dev-postgres
+dev-postgres
 
+# Remove all stop container
+docker container prune
+
+
+# Get into docker container:
 docker exec -it dev-postgres bash
 
 \c coursedb
