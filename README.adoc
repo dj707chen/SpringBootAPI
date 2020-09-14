@@ -35,7 +35,6 @@ curl -v http://localhost:8080/employees
 # Shutdown app
 Ctrl-C
 docker stop dev-postgres
-----
 
 # Restart
 docker start dev-postgres
@@ -54,4 +53,4 @@ dev-postgres
 
 # Remove all stop container
 docker container prune
-
+----
