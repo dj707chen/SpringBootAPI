@@ -1,0 +1,5 @@
+Things of interests for trying:
+
+* Use volume for store data in host file system;
+* Using database *postgres* now, try create database *coursedb*
+* Load data using SQL scripts;

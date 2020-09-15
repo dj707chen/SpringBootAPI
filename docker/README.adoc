@@ -1,3 +1,81 @@
+Run postgres DB by Docker compose
+===========================
 
-Still does not work, please follow ../README.adoc
+{zwsp} +
+
+*Project home is /Users/ying/dev/github/SpringBootAPI*
+{zwsp} +
+
+Start docker
+------------
+
+----
+open a terminal 1
+cd docker
+./docup.sh
+----
+{zwsp} +
+
+Start Spring Boot API application
+---------------------------------
+
+----
+open a terminal 2
+./startApi.sh
+docker ps -a
+
+Access Adminer at: http://localhost:8000/?pgsql=db
+  Server: DB
+  User: postgres
+  Pass: mysecretpassword
+  Database: postgres
+----
+{zwsp} +
+
+Access the API
+---------------
+
+.Access by curl
+----
+curl -v localhost:8080/employees
+*   Trying ::1...
+* TCP_NODELAY set
+* Connected to localhost (::1) port 8080 (#0)
+> GET /employees HTTP/1.1
+> Host: localhost:8080
+> User-Agent: curl/7.64.1
+> Accept: */*
+>
+< HTTP/1.1 200
+< Content-Type: application/json
+< Transfer-Encoding: chunked
+< Date: Tue, 15 Sep 2020 03:47:51 GMT
+<
+* Connection #0 to host localhost left intact
+[{"id":1,"name":"Bilbo Baggins","role":"burglar"},{"id":2,"name":"Frodo Baggins","role":"thief"}]* Closing connection 0
+----
+
+Or 
+
+.Access by brower
+----
+go to http://localhost:8080/employees
+0	
+id	1
+name	"Bilbo Baggins"
+role	"burglar"
+1	
+id	2
+name	"Frodo Baggins"
+role	"thief"
+----
+{zwsp} +
+
+Stop docker
+------------
+
+----
+At terminal 1
+./docdn.sh
+----
 
