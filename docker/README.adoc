@@ -1,10 +1,10 @@
+
 Run postgres DB by Docker compose
 ===========================
 
 {zwsp} +
 
 *Project home is /Users/ying/dev/github/SpringBootAPI*
-{zwsp} +
 
 .Start docker
 ----
@@ -12,7 +12,6 @@ open a terminal 1
 cd docker
 ./docup.sh
 ----
-{zwsp} +
 
 .Start Spring Boot API application
 ----
@@ -26,7 +25,6 @@ Access Adminer at: http://localhost:8000/?pgsql=db
   Pass: mysecretpassword
   Database: postgres
 ----
-{zwsp} +
 
 .Access by curl
 ----
@@ -60,7 +58,6 @@ id	2
 name	"Frodo Baggins"
 role	"thief"
 ----
-{zwsp} +
 
 .Stop docker
 ----
