@@ -8,7 +8,6 @@ Working with PostgreSQL
  
 [NOTE]
 ====
-For a more convenient way to run the app, refer to <<docker/README.adoc#README>>
 For a more convenient way to run the app, refer to <<docker/README.adoc#README>>. 
 ====
 
