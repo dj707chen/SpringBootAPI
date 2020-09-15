@@ -9,6 +9,8 @@ Working with PostgreSQL
 [NOTE]
 ====
 For a more convenient way to run the app, refer link:docker/README.adoc
+====
+
 ----
 # Pull postgres docker image, one time.
 docker pull postgres:11
