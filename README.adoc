@@ -6,6 +6,9 @@ Working with PostgreSQL
  * Download and install docker
  * Run the following
  
+[NOTE]
+====
+For a more convenient way to run the app, refer link:docker/README.adoc
 ----
 # Pull postgres docker image, one time.
 docker pull postgres:11
