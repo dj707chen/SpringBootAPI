@@ -1,5 +1,5 @@
 
-Run postgres DB by Docker compose
+= Run postgres DB by Docker compose
 ===========================
 
 {zwsp} +
