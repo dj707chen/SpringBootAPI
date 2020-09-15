@@ -2,9 +2,12 @@
 = Run postgres DB by Docker compose
 ===========================
 
-{zwsp} +
+:toc:
 
-*Project home is /Users/ying/dev/github/SpringBootAPI*
+[NOTE]
+====
+Project home is /Users/ying/dev/github/SpringBootAPI
+====
 
 .Start docker
 ----
