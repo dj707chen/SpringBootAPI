@@ -6,9 +6,7 @@ Run postgres DB by Docker compose
 *Project home is /Users/ying/dev/github/SpringBootAPI*
 {zwsp} +
 
-Start docker
-------------
-
+.Start docker
 ----
 open a terminal 1
 cd docker
@@ -16,9 +14,7 @@ cd docker
 ----
 {zwsp} +
 
-Start Spring Boot API application
----------------------------------
-
+.Start Spring Boot API application
 ----
 open a terminal 2
 ./startApi.sh
@@ -31,9 +27,6 @@ Access Adminer at: http://localhost:8000/?pgsql=db
   Database: postgres
 ----
 {zwsp} +
-
-Access the API
----------------
 
 .Access by curl
 ----
@@ -55,8 +48,6 @@ curl -v localhost:8080/employees
 [{"id":1,"name":"Bilbo Baggins","role":"burglar"},{"id":2,"name":"Frodo Baggins","role":"thief"}]* Closing connection 0
 ----
 
-Or 
-
 .Access by brower
 ----
 go to http://localhost:8080/employees
@@ -71,11 +62,8 @@ role	"thief"
 ----
 {zwsp} +
 
-Stop docker
-------------
-
+.Stop docker
 ----
 At terminal 1
 ./docdn.sh
 ----
-
