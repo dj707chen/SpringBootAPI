@@ -14,15 +14,20 @@ For a more convenient way to run the app, refer to <<docker/README.adoc#README>>
 ----
 # Pull postgres docker image, one time.
 docker pull postgres:11
+docker images
 
 # To verify pulled image, one time.
 docker image inspect postgres:11
 
 # Run Postgres
 docker run --name dev-postgres -p 5432:5432 -e POSTGRES_PASSWORD=mysecretpassword -d postgres:11
+docker container list
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                    NAMES
+c1bc4a9ed08f        postgres:11         "docker-entrypoint.s…"   5 minutes ago       Up 5 minutes        0.0.0.0:5432->5432/tcp   dev-postgres
 
 # CREATE db coursedb
 docker exec dev-postgres psql -U postgres -c "CREATE DATABASE coursedb"
+CREATE DATABASE
 
 # Open another terminal
 cd ~/dev/github
