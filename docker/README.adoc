@@ -29,6 +29,12 @@ Access Adminer at: http://localhost:8000/?pgsql=db
   Database: postgres
 ----
 
+*API doc*(JSON): http://localhost:8080/v3/api-docs/
+
+*API doc*(YAML): http://localhost:8080/v3/api-docs.yaml
+
+*Swagger UI*: http://localhost:8080/swagger-ui.html
+
 .Access by curl
 ----
 curl -v localhost:8080/employees

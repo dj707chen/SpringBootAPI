@@ -35,7 +35,13 @@ git clone https://github.com/weipingc/SpringBootAPI.git
 cd SpringBootAPI
 ./mvnw clean
 bash startApi.sh
+----
+*API doc*(JSON): http://localhost:8080/v3/api-docs/
 
+*API doc*(YAML): http://localhost:8080/v3/api-docs.yaml
+
+*Swagger UI*: http://localhost:8080/swagger-ui.html
+----
 # in brower
 # go to http://localhost:8080/employees
 
