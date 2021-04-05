@@ -2,6 +2,7 @@ package payroll;
 
 import java.util.List;
 
+//import org.springframework.security.access.annotation.Secured;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -9,6 +10,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
+
+// https://stackoverflow.com/questions/25855698/how-can-i-retrieve-basic-authentication-credentials-from-the-header
 
 @RestController
 class EmployeeController {
@@ -23,10 +26,12 @@ class EmployeeController {
 
 	@GetMapping("/employees")
 	List<Employee> all() {
+		System.out.println(("[EmployeeController.all"));
 		return repository.findAll();
 	}
 
 	@PostMapping("/employees")
+//	@Secured("ROLE_ADMIN")
 	Employee newEmployee(@RequestBody Employee newEmployee) {
 		return repository.save(newEmployee);
 	}

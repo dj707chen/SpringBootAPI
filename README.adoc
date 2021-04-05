@@ -36,11 +36,21 @@ cd SpringBootAPI
 ./mvnw clean
 bash startApi.sh
 ----
+Setup API doc and Swagger: https://www.baeldung.com/spring-rest-openapi-documentation
+
 *API doc*(JSON): http://localhost:8080/v3/api-docs/
 
 *API doc*(YAML): http://localhost:8080/v3/api-docs.yaml
 
 *Swagger UI*: http://localhost:8080/swagger-ui.html
+
+*Karate test*: https://semaphoreci.com/community/tutorials/testing-a-java-spring-boot-rest-api-with-karate
+
+*Karate demo, example feature files*: https://intuit.github.io/karate/karate-demo/
+
+*Secure web app*: https://spring.io/guides/gs/securing-web/
+
+*Configure headers*: https://intuit.github.io/karate/#http-header-manipulation
 ----
 # in brower
 # go to http://localhost:8080/employees
